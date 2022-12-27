@@ -2,23 +2,21 @@ import { useMemo, useState } from "react";
 
 function App() {
 
-  const [valueTest, setValueTest] = useState(0)
+  const [valueTest, setValueTest] = useState(0)//useState que usaremos como valor de referencia.
   
-  const handleControlNumero = (value)=>{
-    console.log("entra por cambio de valor")
-    return value
+  const handleControlNumero = (value)=>{ //Funcion que ejecutará useMemo si el valor de referencia es nuevo.
+    console.log("Cambio de valor referencia a",value)
   }
 
-  const showNumber = useMemo(() => {return handleControlNumero(valueTest)}, [valueTest]);
-  //Se ejecuta el "handleControlNumero" solo cuando varia el "valueTest" que se especifica entre corchetes. 
-  //Que se actualice el estado no cuenta como cambio de valor, con el useEffect se mira solo que algo pase, aqui que el valor anterior
-  //no sea el mismo que el nuevo. 
+  useMemo(() => {handleControlNumero(valueTest)}, [valueTest]); //useMemo con sus dos valores ()=>{} y [valueTest]
+  
 
 
 
   return (
    <>
-    Hola mundo {showNumber}
+    Valor de test actual {valueTest} <br></br>
+    {/* Modificamos valueTest e imprimimos por consola */}
     <button onClick={()=>{console.log("cambio 5");setValueTest("5")}}>Cambiar a 5</button>
     <button onClick={()=>{console.log("cambio 3");setValueTest("3")}}>Cambiar a 3</button>
    </>

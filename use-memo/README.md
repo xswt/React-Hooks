@@ -6,13 +6,13 @@ Este Hook de React nos permite optimizar los desarrollos y reducir el tiempo de 
 
 //Opción 1 donde importmaos useMemo
 import { useMemo } from "react";
-const showNumber = useMemo(() => {return handleControlNumero(valueTest)}, [valueTest]);
+useMemo(() => {handleControlNumero(valueTest)}, [valueTest]);
 
 ```
 
 ```javascript
 //Opción 2 donde NO importmaos useMemo
-const showNumber = React.useMemo(() => {return handleControlNumero(valueTest)}, [valueTest]);
+React.useMemo(() => {handleControlNumero(valueTest)}, [valueTest]);
 ```
                 
 * Import useMemo
@@ -23,6 +23,15 @@ const showNumber = React.useMemo(() => {return handleControlNumero(valueTest)}, 
     1.  `[?]` El segundo es el valor que va tener como referencia para ver si ejecuta de nuevo la función o no.
 
 Ahora que hemos visto como se estructura useMemo podemos entender un poco más su funcionamiento, este hook almacena en cache el valor de referencia `[?]` y cada vez que se renderiza de nuevo el componente va a comprar este valor de nuevo. Si el valor `[?]` es el mismo que antes del renderizado no lanza la función interna `()=>{}`, si por el contrario el valor de referencia es nuevo lanzara de nuevo la función `()=>{}`. 
+
+Es importante tener en cuenta que en caso de que el valor de referencia `[?]` sea un estado (useState) el useMemo solo tendrá en cuenta como "modificación del valor" cuando el valor en sí sea distinto al renderizado anterior. Si la referencia vale `5` y nosotros la modificamos a `5` de nuevo haciendo uso del setValue no lo contara como cambio ya que en ambos casos vale `5`.
+
+Si la función que ejecuta el useMemo tiene un return de algo que queremos mostrar/usar en el resto del código podemos meter el useMemo en una const:
+
+```javascript
+const showValueHTML = useMemo(() => {return handleControlNumero(valueTest)}, [valueTest]);
+//Ya podriamos usar showValueHTML en el resto del código.
+```
 
 
 [useMemoOficialLink]: https://reactjs.org/docs/hooks-reference.html#usememo
