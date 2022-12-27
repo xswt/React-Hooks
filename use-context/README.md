@@ -98,7 +98,7 @@ export default App;
     * Podriamos desestructurar el objeto y seleccionar solo los valores que vayamos a usar `const {nombre,llamadaConsole} = useContext(NombreContext)`
   Ambas opciones son validas, todo dependera de si vamos a utilizar todos los valores del objeto o solo alguno de ellos. Si solo vamos a utilizar `nombre` no tendria sentido pasar un objeto que puede tener X variables/constantes y cargar datos innecesarios. 
 * Usar datos del "context"
-  *Una vez que tenemos acceso a `NombreContext` solo nos queda hacer uso de lo que necesitemos como si se tratase de una funcion/variable/constante cualquiera como mostramos aqui:
+  * Una vez que tenemos acceso a `NombreContext` solo nos queda hacer uso de lo que necesitemos como si se tratase de una funcion/variable/constante cualquiera como mostramos aqui:
    ```javascript
   const {nombre,llamadaConsole} = useContext(NombreContext)
   llamadaConsole()  //Ejemplo de como se llama a una funcion que esta en el context.
