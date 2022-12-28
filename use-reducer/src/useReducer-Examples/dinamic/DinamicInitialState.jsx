@@ -18,15 +18,7 @@ const cargaDinamicaInitialState = (value)=>{
 
 export const DinamicInitialState = ({initialStateCount})=>{
     const [numero, dispatch] = useReducer(accionesRealizar, initialStateCount ,cargaDinamicaInitialState); 
-    /*
-     useReducer tiene un tercer parametro que nos permite inicializar el valor de forma dinamica, por ejemplo usando 
-     un valor que nos llegue por props del componente.
 
-     Le indicaremos una funcion en nuestro casi "cargaDinamicaInitialState". Esta funcion recibe como parametro de forma 
-     automatica lo que indicamos en el segundo parametro del useReducer en este ejemplo seria "initialStateCount".
-
-     Tras eso en la funcion de "cargaDinamicaInitialState" inicializamos el objeto/Array/const con el value (parametro).
-    */
 
     return (
       <>
