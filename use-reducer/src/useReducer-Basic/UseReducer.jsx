@@ -13,7 +13,7 @@ export const  accionesRealizar = (state, action) => { //Funcion que ejecuta en b
   }
 
 
-export const UseReducer = ()=>{
+export const UseReducerExample = ()=>{
     const [numero, dispatch] = useReducer(accionesRealizar, 0); //[variable, disparador(puede ser el nombre que quieras)] = useReducer(funcion que controla las acciones (action), estadoInicial)
 
     return (

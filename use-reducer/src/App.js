@@ -1,4 +1,4 @@
-import { UseReducer } from "./useReducer-Basic/UseReducer";
+import { UseReducerExample } from "./useReducer-Basic/UseReducer";
 // import { DinamicInitialState } from "./useReducer-Examples/dinamic/DinamicInitialState";
 // import { ArrayUseReducer } from "./useReducer-Examples/basics/ArrayUseReducer";
 // import { BasicUseReducer } from "./useReducer-Examples/basics/BasicUseReducer";
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
      useReducer <hr></hr><br></br>
-     <UseReducer></UseReducer>
+     <UseReducerExample></UseReducerExample>
      {/* ------- Otros ejemplos de como usar useReducer con distintos initialStates -------- */}
      {/* <ArrayUseReducer></ArrayUseReducer> */}
      {/* <BasicUseReducer></BasicUseReducer> */}
