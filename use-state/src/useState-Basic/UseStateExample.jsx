@@ -2,15 +2,15 @@ import { useState } from "react";
 
 export const UseStateExample = ()=>{
      
-      const [countNumber, setCountNumber] = useState(0)
+      const [nombre, setNombre] = useState('Paula')
     
       return (
         <>
           useState<hr/>
-          Numero: {countNumber}
+          Nombre: {nombre}
           <br/>
-          <button onClick={()=>setCountNumber(countNumber + 1)}>+</button>
-          <button onClick={()=>setCountNumber(countNumber - 1)}>-</button>
+          <button onClick={()=>setNombre("Guille")}>Guille</button>
+          <button onClick={()=>setNombre("Acrux")}>Acrux</button>
         </>
       );
 }
