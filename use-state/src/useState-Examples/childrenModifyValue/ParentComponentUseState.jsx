@@ -10,6 +10,7 @@ export const ParentComponentUseState = ()=>{
           useState<hr/>
           Numero: {countNumber}
           <br/>
+          {/* Podemos pasar a los hijos tanto el valor del useState como su modificador y estos haran uso de ello */}
           <ChildrenComponentModify countNumber={countNumber} setCountNumber={setCountNumber}></ChildrenComponentModify>
         </>
       );
