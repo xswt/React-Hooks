@@ -1,1 +1,0 @@
-export const initialState_FullExample = 0

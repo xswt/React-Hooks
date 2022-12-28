@@ -1,7 +1,8 @@
 import { UseReducer } from "./useReducer-Basic/UseReducer";
-// import { ArrayUseReducer } from "./useReducer-Examples/ArrayUseReducer";
-// import { BasicUseReducer } from "./useReducer-Examples/BasicUseReducer";
-// import { ObjectUseReducer } from "./useReducer-Examples/ObjectUseReducer";
+// import { DinamicInitialState } from "./useReducer-Examples/dinamic/DinamicInitialState";
+// import { ArrayUseReducer } from "./useReducer-Examples/basics/ArrayUseReducer";
+// import { BasicUseReducer } from "./useReducer-Examples/basics/BasicUseReducer";
+// import { ObjectUseReducer } from "./useReducer-Examples/basics/ObjectUseReducer";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
      {/* <ArrayUseReducer></ArrayUseReducer> */}
      {/* <BasicUseReducer></BasicUseReducer> */}
      {/* <ObjectUseReducer></ObjectUseReducer> */}
+     {/* <DinamicInitialState initialStateCount={0}></DinamicInitialState> */}
     </>
   );
 }
