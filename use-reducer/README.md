@@ -47,10 +47,10 @@ export const UseReducerExample = ()=>{
   * `numero` hace referencia a la variable/constante/Array/Objeto que vamos a utilizar en el resto del codigo y modificar con el useReducer. 
   * `dispatch` es el nombre que recibe el "disparador" lo llamaremos para realizar una `action` (accion) sobre el valor en nuestro caso **numero**. Dispatch es un nombre generico **PUEDES PONER EL NOMBRE QUE QUIERAS**, pero no repetirlo para dos useReducer
     ```javascript
-    // ESTO SI
+    // ESTO ✔️
     const [numero, dispatchNumero] = useReducer(accionesRealizar, 0); 
     const [nombre, dispatchNombre] = useReducer(accionesRealizar, 0); 
-    // ESTO NO
+    // ESTO ❌
     const [numero, dispatch] = useReducer(accionesRealizar, 0); 
     const [nombre, dispatch] = useReducer(accionesRealizar, 0); 
     ```
